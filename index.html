@@ -201,7 +201,7 @@
         }
 
         .email {
-            color: #D44638;
+            color: #0088CC;
             background-color: rgba(212, 70, 56, 0.1);
         }
 
@@ -463,7 +463,7 @@
                 </div>
                 
                 <div class="form-group">
-                    <label for="income" data-translate="incomeLabel">الدخل الشهري (<span class="currency-symbol">ريال</span>):</label>
+                    <label for="income" data-translate="incomeLabel">الدخل الشهري (<span class="currency-symbol">دينار</span>):</label>
                     <input type="number" id="income" class="form-control" placeholder="أدخل إجمالي دخلك الشهري">
                 </div>
                 
@@ -489,25 +489,35 @@
                 </div>
                 
                 <div class="form-group">
+                    <label for="entertainment" data-translate="entertainmentLabel">الترفيه:</label>
+                    <input type="number" id="entertainment" class="form-control" placeholder="المبلغ الشهري">
+                </div>
+                                
+                <div class="form-group">
+                    <label for="travel" data-translate="entertainmentLabel">السفر:</label>
+                    <input type="number" id="travel" class="form-control" placeholder="المبلغ الشهري">
+                </div>
+
+                <div class="form-group">
                     <label for="other" data-translate="otherLabel">نفقات أخرى:</label>
                     <input type="number" id="other" class="form-control" placeholder="المبلغ الشهري">
                 </div>
-                
+
                 <button class="btn btn-primary calculate-btn" onclick="calculateBudget()" data-translate="calculateBtn">حساب الميزانية</button>
                 
                 <div id="result" class="result">
                     <h3 data-translate="summaryTitle">ملخص الميزانية</h3>
                     <div class="summary-item">
                         <span data-translate="totalIncome">إجمالي الدخل:</span>
-                        <span id="total-income">0 <span class="currency-symbol">ريال</span></span>
+                        <span id="total-income">0 <span class="currency-symbol">دينار</span></span>
                     </div>
                     <div class="summary-item">
                         <span data-translate="totalExpenses">إجمالي النفقات:</span>
-                        <span id="total-expenses">0 <span class="currency-symbol">ريال</span></span>
+                        <span id="total-expenses">0 <span class="currency-symbol">دينار</span></span>
                     </div>
                     <div class="summary-item highlight">
                         <span data-translate="savingsLabel">المدخرات/العجز:</span>
-                        <span id="savings">0 <span class="currency-symbol">ريال</span></span>
+                        <span id="savings">0 <span class="currency-symbol">دينار</span></span>
                     </div>
                     <div id="advice" class="advice-box">
                         <h4 data-translate="adviceTitle">نصائح مالية</h4>
@@ -520,26 +530,30 @@
         <!-- الأقسام المضافة من الكود الفرعي -->
         <div class="content-section" id="reports">
             <h2>📊 التقارير الشهرية</h2>
-            <p>مثال على تقرير شهري...</p>
+            <p> مثال هذا الشهر بلغ راتبك 100,000 دج، بينما وصلت مصاريفك الإجمالية إلى 90,000 دج. كانت أكبر النفقات على السكن (40,000 دج) والأكل (25,000 دج) والمواصلات (15,000 دج). تمكنت من توفير 10,000 دج فقط، أي ما يعادل 10% من دخلك. للشهر القادم، حاول تخفيض مصاريف الأكل إلى 20,000 دج عبر الطبخ المنزلي وشراء المواد الأساسية بذكاء. كما خصص 5,000 دج إضافية للطوارئ.</p>
         </div>
 
         <div class="content-section" id="faq">
             <h2>❓ الأسئلة الأكثر شيوعًا</h2>
             <ul>
-                <li>كيف أبدأ باستخدام شهريّاتي؟</li>
+                <li>كيف أبدأ باستخدام شهريّتي؟</li>
+                <li>تبدأ باستخدام شهريتي عندما تذهب إلى أيقونة حاسبة الميزانية وتذخل راتبك و مانفقته وفيما انفقته ثم تضغط على زر حساب الميزانية تظهر لك النتائج</li>
                 <li>هل البيانات محفوظة؟</li>
+                <li>نعم بيانانك محفوظة تلقائيا في السحابة</li>
                 <li>كيف أضيف تقارير؟</li>
+                <li>هذه الميزة ستكون متاحة قريبا</li>
             </ul>
         </div>
 
         <div class="content-section" id="about">
             <h2>📌 من نحن</h2>
-            <p>موقع تم تصيمه من المطور بعيكر أحمد لمساعدتك على تنظيم مصاريفك ومدخراتك وتحسين وعيك المالي.</p>
+            <p>موقع تم تصيمه وبرمجته من طرف المطور بعيكر أحمد لمساعدتك على تنظيم مصاريفك ومدخراتك وتحسين وعيك المالي.</p>
         </div>
 
         <div class="content-section" id="articles">
             <h2>📰 مقالات مالية</h2>
             <p>كيف تدّخر المال وتتحكم في مصاريفك اليومية؟</p>
+            <p>ابدأ بتسجيل كل مصروف يومي في تطبيقنا وحدد أولوياتك وقلل النفقات غير الضرورية مثل الوجبات الجاهزة خصص 20% من دخلك للادخار أولاً بأول ثم الاستثمار الآمن إن أردث ذلك تواصل معنا عبر وسائل التواصل الإجتماعي أعلاه استخدم القوائم عند التسوق وابتعد عن العروض غير المخطط لها راجع مصروفاتك أسبوعياً لتعديل سلوكك المالي </p>
         </div>
 
         <div class="content-section developer-only" id="developer">
